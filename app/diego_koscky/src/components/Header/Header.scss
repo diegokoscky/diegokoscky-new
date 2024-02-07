@@ -1,0 +1,122 @@
+.logo {
+    padding-left: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 3rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        grid-column: span 4;
+    }
+}
+
+.logo-sidebar {
+    padding: 1.5rem 2rem;
+    border-bottom: 0.062rem solid rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 3rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+nav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
+
+    ul {
+        padding-right: 0 !important;
+
+        li {
+            a {
+                padding: 1rem;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.menu-principal {
+    @media screen and (max-width: 991px) {
+        position: fixed;
+        display: flex;
+        height: 100%;
+        width: 30vw;
+        left: -31vw;
+        bottom: 0;
+        top: 0;
+        padding: 0;
+        background: var(--primary-color);
+        box-shadow: 0.12rem 0 0.62rem rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: var(--transition);
+
+        li {
+            margin-bottom: 1.2rem;
+            width: 100%;
+
+            a {
+                padding: 1rem 2rem;
+                color: var(--white);
+                font-weight: 500;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 40vw;
+        left: -41vw;
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 55vw;
+        left: -56vw;
+    }
+}
+
+.menu-principal.open {
+    left: 0;
+    z-index: 3;
+}
+
+.nav-backdrop {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: none;
+    transition: var(--transition);
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+
+    svg {
+        height: 1.6rem;
+        width: auto;
+        fill: var(--text-color);
+    }
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}

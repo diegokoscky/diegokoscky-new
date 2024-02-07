@@ -1,0 +1,69 @@
+.hero {
+    align-items: center;
+
+    > :first-child {
+        padding-left: 0;
+    }
+
+    > :last-child {
+        padding-right: 0;
+
+        @media screen and (max-width: 991px) {
+            padding-left: 0;
+        }
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+
+        @media screen and (min-width: 1300px) {
+            font-size: 3.5rem;
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1299px) {
+            font-size: 3rem;
+        }
+
+        @media screen and (max-width: 550px) {
+            line-height: 1;
+        }
+
+        span {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+
+            @media screen and (min-width: 992px) {
+                font-size: 3rem;
+            }
+
+            @media screen and (min-width: 1300px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+.perfil {
+    padding: 2.5rem;
+    border: 0.06rem solid var(--border-color);
+    max-width: 100%;
+
+    @media screen and (min-width: 1300px) {
+        max-width: 70%;
+    }
+
+    @media screen and (max-width: 991px) {
+        max-width: 70%;
+        margin-top: 3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        max-width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,400&display=swap");
+@import "../components/Buttons/Buttons.scss";
+
+$grid-colunas: 12;
+$grid-breakpoint: 992px;
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --body-color: #f2f2f2;
+    --primary-color: #7c0eaa;
+    --text-color: #353535;
+    --border-color: #dcdcdc;
+    --button-shadow: 0 0 0.87rem rgba(124, 14, 170, 0.8);
+    --font-size: 16px;
+    --font-family: "Poppins";
+    --grid-padding: 1rem;
+    --transition: all ease 0.2s;
+}
+
+@media screen and (min-width: 1400px) {
+    :root {
+        --font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    :root {
+        --font-size: 15px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family), sans-serif;
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+a,
+span,
+li,
+p,
+button {
+    font-size: 1.2rem;
+}
+
+a,
+span,
+li,
+p {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat($grid-colunas, 1fr);
+}
+
+@mixin colunas($cols) {
+    @for $i from 0 to $grid-colunas {
+        .col-#{$i + 1} {
+            position: relative;
+            grid-column: span $grid-colunas;
+            padding-left: var(--grid-padding);
+            padding-right: var(--grid-padding);
+        }
+    }
+}
+
+@include colunas($grid-colunas);
+
+@mixin grid-breakpoints($size, $fr) {
+    @media screen and ($size) {
+        @for $i from 0 to $fr {
+            .col-#{$i + 1} {
+                grid-column: span $i + 1;
+            }
+        }
+    }
+}
+
+@include grid-breakpoints("min-width:" + $grid-breakpoint, $grid-colunas);
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @media screen and (min-width: $grid-breakpoint) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.display-grid {
+    display: grid;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-a-center {
+    align-items: center;
+}
+
+.flex-a-end {
+    align-items: flex-end;
+}
+
+.flex-a-start {
+    align-items: flex-start;
+}
+
+.flex-j-center {
+    justify-content: center;
+}
+
+.flex-j-between {
+    justify-content: space-between;
+}
+
+.flex-j-around {
+    justify-content: space-around;
+}
+
+.flex-j-end {
+    justify-content: flex-end;
+}
+
+.flex-j.start {
+    justify-content: flex-start;
+}
+
+.circle-radius {
+    border-radius: 50%;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.show {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@mixin margin-top($size) {
+    @for $i from 0 to $size {
+        .margin-top-#{$i + 1} {
+            margin-top: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include margin-top(5);
+
+@mixin margin-bottom($size) {
+    @for $i from 0 to $size {
+        .margin-bottom-#{$i + 1} {
+            margin-bottom: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include margin-bottom(5);
+
+@mixin padding-top($size) {
+    @for $i from 0 to $size {
+        .padding-top-#{$i + 1} {
+            padding-top: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include padding-top(5);
+
+@mixin padding-bottom($size) {
+    @for $i from 0 to $size {
+        .padding-bottom-#{$i + 1} {
+            padding-bottom: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include padding-bottom(5);
