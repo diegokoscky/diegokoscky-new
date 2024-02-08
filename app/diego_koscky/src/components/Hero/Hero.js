@@ -1,6 +1,6 @@
 import "./Hero.scss";
 
-function Hero() {
+export default function Hero() {
     return (
         <section className="hero row container">
             <div className="col-7">
@@ -23,7 +23,7 @@ function Hero() {
             <div className="col-5 display-flex flex-a-center flex-j-center">
                 <div className="perfil circle-radius">
                     <img
-                        src="/diego-web-designer.jpg"
+                        src="/diego-web-designer.webp"
                         alt="Diego Web Designer"
                         className="circle-radius"
                     />
@@ -32,5 +32,3 @@ function Hero() {
         </section>
     );
 }
-
-export default Hero;

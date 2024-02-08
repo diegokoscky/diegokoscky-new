@@ -2,8 +2,6 @@
 <html lang="pt-BR">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Language" content="pt-br" />
-        <meta name="language" content="pt-br" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="url" content="www.diegokoscky.com.br" />
@@ -24,7 +22,10 @@
         />
         <meta name="author" content="Diego Koscky" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link
+            rel="apple-touch-icon"
+            href="%PUBLIC_URL%/apple-touch-icon.webp"
+        />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <link rel="canonical" href="https://www.diegokoscky.com.br" />
 
@@ -33,6 +34,18 @@
     <body>
         <div id="root"></div>
 
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                    .register("./sw.js", { scope: "/" })
+                    .then(function (registration) {
+                        console.log("Service worker registrado");
+                    });
+                navigator.serviceWorker.ready.then(function (registration) {
+                    console.log("Service worker pronto");
+                });
+            }
+        </script>
         <script type="application/ld+json">
             {
                 "@context": "http://schema.org",

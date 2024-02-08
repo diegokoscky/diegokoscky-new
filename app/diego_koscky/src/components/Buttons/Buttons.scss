@@ -14,12 +14,7 @@
     background-color: var(--primary-color);
     color: var(--white);
 
-    &:hover {
-        background-color: var(--white);
-        color: var(--primary-color);
-        border-color: var(--primary-color);
-    }
-
+    &:hover,
     &:focus,
     &:active {
         border-color: var(--primary-color);
