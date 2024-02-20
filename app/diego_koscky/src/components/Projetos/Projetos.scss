@@ -1,0 +1,55 @@
+.projetos-item {
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.projetos-item-inner {
+    background-image: url("../../../public/bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    border-radius: 1.87rem;
+
+    img {
+        width: 90%;
+        height: auto;
+        transition: var(--transition);
+    }
+}
+
+.projetos-item-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+
+    p {
+        font-weight: 600;
+        margin-right: 0.5rem;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.27rem;
+        height: 1.27rem;
+        border: 0.13rem solid var(--primary-color);
+        border-radius: 2.5rem;
+        transform: rotate(-20deg);
+
+        svg {
+            fill: var(--primary-color);
+            width: 0.75rem;
+            height: auto;
+        }
+    }
+}

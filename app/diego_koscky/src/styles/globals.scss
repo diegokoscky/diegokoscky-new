@@ -53,6 +53,63 @@ h3 {
     color: var(--text-color);
 }
 
+h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+
+    @media screen and (min-width: 1300px) {
+        font-size: 3.5rem;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1299px) {
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        line-height: 1;
+    }
+
+    span {
+        font-size: 2.8rem;
+        color: var(--primary-color);
+
+        @media screen and (min-width: 992px) {
+            font-size: 3rem;
+        }
+
+        @media screen and (min-width: 1300px) {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 1300px) {
+        font-size: 3.1rem;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1299px) {
+        font-size: 2.6rem;
+    }
+
+    span {
+        font-size: 2.4rem;
+        color: var(--primary-color);
+
+        @media screen and (min-width: 992px) {
+            font-size: 2.6rem;
+        }
+
+        @media screen and (min-width: 1300px) {
+            font-size: 3.1rem;
+        }
+    }
+}
+
 a,
 span,
 li,
@@ -77,8 +134,19 @@ ul {
 }
 
 section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @media screen and (min-width: 992px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .row {
@@ -196,6 +264,26 @@ section {
 }
 
 @include margin-bottom(5);
+
+@mixin margin-right($size) {
+    @for $i from 0 to $size {
+        .margin-right-#{$i + 1} {
+            margin-right: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include margin-right(5);
+
+@mixin margin-left($size) {
+    @for $i from 0 to $size {
+        .margin-left-#{$i + 1} {
+            margin-left: #{$i + 1}+ "rem";
+        }
+    }
+}
+
+@include margin-left(5);
 
 @mixin padding-top($size) {
     @for $i from 0 to $size {
