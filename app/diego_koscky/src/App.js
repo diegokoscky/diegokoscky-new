@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Projetos from "./components/Projetos/Projetos";
 import Experiencia from "./components/Experiencia/Experiencia";
+import Habilidades from "./components/Habilidades/Habilidades";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
                 <Hero />
                 <Projetos />
                 <Experiencia />
+                <Habilidades />
             </main>
             <Footer />
         </>
