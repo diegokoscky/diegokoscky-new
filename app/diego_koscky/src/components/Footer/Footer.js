@@ -1,5 +1,50 @@
 import "./Footer.scss";
+import { IoMdHeart } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Footer() {
-    return <footer className="footer"></footer>;
+    var whatsapp = "https://api.whatsapp.com/send?phone=5531987179432";
+    var celular = "tel:+5531987179432";
+
+    return (
+        <footer className="footer">
+            <div className="container row">
+                <div className="col-6 footer-logo">
+                    <a href="/" aria-label="Logo" className="logo">
+                        <img src="/logo.svg" alt="Logo" />
+                    </a>
+                    <p>
+                        Vamos trabalhar juntos<span>?</span>
+                    </p>
+                    <p>
+                        <a
+                            href={`${celular}`}
+                            title="Me ligue agora"
+                            className="footer-tel"
+                        >
+                            Tel.: (31) 98717-9432
+                        </a>
+                    </p>
+                </div>
+                <div className="col-6 footer-legal">
+                    <p>© Todos os direitos reservados</p>
+                    <p>
+                        Feito com
+                        <IoMdHeart />
+                        por Diego Koscky
+                    </p>
+                </div>
+            </div>
+
+            <a
+                href={`${whatsapp}`}
+                className="btn-whatsapp"
+                title="Me chame no Whatsapp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IoLogoWhatsapp />
+            </a>
+        </footer>
+    );
 }

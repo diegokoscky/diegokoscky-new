@@ -1,0 +1,72 @@
+.footer {
+    border-top: 0.06rem solid var(--border-color);
+    padding: 3rem 0;
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.footer-logo {
+    a {
+        margin-bottom: 0.8rem;
+        display: inline-block;
+    }
+
+    p {
+        span {
+            color: var(--primary-color);
+        }
+    }
+}
+
+a.footer-tel {
+    display: inline;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    p {
+        text-align: right;
+    }
+
+    svg {
+        color: var(--primary-color);
+        margin: 0 0.3rem;
+        position: relative;
+        top: 0.19rem;
+    }
+
+    @media screen and (max-width: 991px) {
+        align-items: flex-start;
+        padding-top: 1.2rem;
+
+        p {
+            text-align: left;
+        }
+    }
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    color: var(--color-whatsapp);
+    box-shadow: 0 0.06rem 0.42rem rgba(0, 0, 0, 0.2);
+    width: 3.5rem;
+    height: 3.5rem;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.5rem;
+    font-size: 1.7rem;
+    background: var(--body-color);
+    border: 0.06rem solid var(--border-color);
+}
