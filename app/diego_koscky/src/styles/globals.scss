@@ -39,6 +39,11 @@ $grid-breakpoint: 992px;
     font-family: var(--font-family), sans-serif;
 }
 
+::selection {
+    color: var(--white);
+    background: var(--primary-color);
+}
+
 html {
     font-size: var(--font-size);
 }
@@ -128,6 +133,7 @@ p {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul {

@@ -12,7 +12,7 @@ export default function Contato() {
 
     return (
         <>
-            <section className="contato row container">
+            <section id="contato" className="contato row container">
                 <div className="col-12">
                     <h2>
                         Contato<span>.</span>

@@ -46,7 +46,7 @@ export default function Experiencia() {
 
     return (
         <>
-            <section className="experiencia row container">
+            <section id="experiencia" className="experiencia row container">
                 <div className="col-12">
                     <h2>
                         Experiência<span>.</span>

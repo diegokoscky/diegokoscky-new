@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import "./Hero.scss";
 
 export default function Hero() {
@@ -12,13 +13,15 @@ export default function Hero() {
                     Web designer freelancer, desenvolvedor front-end e
                     empreendedor digital.
                 </p>
-                <a
-                    href="#contato"
+                <Link
+                    to="contato"
                     title="Entre em Contato"
                     className="btn btn-primary"
+                    smooth={true}
+                    duration={600}
                 >
                     Entre em Contato
-                </a>
+                </Link>
             </div>
             <div className="col-5 display-flex flex-a-center flex-j-center">
                 <div className="perfil circle-radius">

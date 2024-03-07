@@ -3,7 +3,7 @@ import "./Habilidades.scss";
 export default function Habilidades() {
     return (
         <>
-            <section className="habilidades row container">
+            <section id="habilidades" className="habilidades row container">
                 <div className="col-12">
                     <h2>
                         Habilidades<span>.</span>

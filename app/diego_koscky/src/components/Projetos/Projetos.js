@@ -8,7 +8,7 @@ export default function Projetos() {
     var site_4 = "https://www.injetec.com.br";
 
     return (
-        <section className="projetos row container">
+        <section id="projetos" className="projetos row container">
             <div className="col-12">
                 <h2>
                     Projetos<span>.</span>

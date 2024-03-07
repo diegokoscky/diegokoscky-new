@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Header.scss";
 import { FaBars } from "react-icons/fa6";
 
 export default function Header() {
     const [showNav, setShowNav] = useState(false);
+    const duration = 600;
 
     return (
-        <header className="header">
+        <header id="header" className="header">
             <nav className="row container">
                 <a href="/" aria-label="Logo" className="col-2 logo">
                     <img src="/logo.svg" alt="Logo" />
@@ -21,21 +23,54 @@ export default function Header() {
                         <img src="/logo-invert.svg" alt="Logo" />
                     </li>
                     <li>
-                        <a href="#hero" title="Home">
+                        <Link
+                            to="header"
+                            title="Home"
+                            smooth={true}
+                            duration={duration}
+                        >
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#projetos">Projetos</a>
+                        <Link
+                            to="projetos"
+                            title="Projetos"
+                            smooth={true}
+                            duration={duration}
+                        >
+                            Projetos
+                        </Link>
                     </li>
                     <li>
-                        <a href="#experiencia">Experiência</a>
+                        <Link
+                            to="experiencia"
+                            title="Experiência"
+                            smooth={true}
+                            duration={duration}
+                        >
+                            Experiência
+                        </Link>
                     </li>
                     <li>
-                        <a href="#habilidades">Habilidades</a>
+                        <Link
+                            to="habilidades"
+                            title="Habilidades"
+                            smooth={true}
+                            duration={duration}
+                        >
+                            Habilidades
+                        </Link>
                     </li>
                     <li>
-                        <a href="#contato">Contato</a>
+                        <Link
+                            to="contato"
+                            title="Contato"
+                            smooth={true}
+                            duration={duration}
+                        >
+                            Contato
+                        </Link>
                     </li>
                 </ul>
 

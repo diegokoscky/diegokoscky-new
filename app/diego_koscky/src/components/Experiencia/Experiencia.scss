@@ -111,8 +111,15 @@
         }
 
         .tab-content-item {
-            display: none;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
             transition: var(--transition);
+        }
+
+        .tab-content-item.show {
+            visibility: visible;
+            opacity: 1;
         }
     }
 }

@@ -20,6 +20,14 @@
     }
 }
 
+img.logo {
+    width: 100%;
+    height: auto;
+    max-width: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
 a.footer-tel {
     display: inline;
     margin-bottom: 0;
@@ -69,4 +77,9 @@ a.footer-tel {
     font-size: 1.7rem;
     background: var(--body-color);
     border: 0.06rem solid var(--border-color);
+    transition: var(--transition);
+
+    &:hover {
+        box-shadow: 0 0.26rem 0.62rem rgba(0, 0, 0, 0.3);
+    }
 }

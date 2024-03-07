@@ -10,9 +10,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="container row">
                 <div className="col-6 footer-logo">
-                    <a href="/" aria-label="Logo" className="logo">
-                        <img src="/logo.svg" alt="Logo" />
-                    </a>
+                    <img src="/logo.svg" alt="Logo" className="logo" />
                     <p>
                         Vamos trabalhar juntos<span>?</span>
                     </p>
