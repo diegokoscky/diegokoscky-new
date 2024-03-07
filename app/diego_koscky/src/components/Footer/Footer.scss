@@ -44,6 +44,12 @@ a.footer-tel {
         text-align: right;
     }
 
+    a {
+        display: inline;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
     svg {
         color: var(--primary-color);
         margin: 0 0.3rem;

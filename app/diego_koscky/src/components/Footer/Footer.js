@@ -5,6 +5,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 export default function Footer() {
     var whatsapp = "https://api.whatsapp.com/send?phone=5531987179432";
     var celular = "tel:+5531987179432";
+    var blog = "https://diegokoscky.com.br/blog/";
 
     return (
         <footer className="footer">
@@ -29,7 +30,15 @@ export default function Footer() {
                     <p>
                         Feito com
                         <IoMdHeart />
-                        por Diego Koscky
+                        por{" "}
+                        <a
+                            href={`${blog}`}
+                            title="Blog Diego Koscky"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Diego Koscky
+                        </a>
                     </p>
                 </div>
             </div>
