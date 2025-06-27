@@ -81,33 +81,5 @@
         ></noscript>
 
         <div id="root"></div>
-
-        <script>
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker
-                    .register("./sw.js", { scope: "/" })
-                    .then(function (registration) {
-                        console.log("Service worker registrado");
-                    });
-                navigator.serviceWorker.ready.then(function (registration) {
-                    console.log("Service worker pronto");
-                });
-            }
-        </script>
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                "url": "http://diegokoscky.com.br",
-                "logo": "http://diegokoscky.com.br/imgs/externos/diegokoscky.jpg",
-                "name": "Diego Koscky - Web Designer Freelancer BH | Marketing Digital",
-                "description": "Web designer freelancer, desenvolvedor frontend, marketing digital e empreendedor.",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+55-31-98717-9432",
-                    "contactType": "Customer service"
-                }
-            }
-        </script>
     </body>
 </html>
